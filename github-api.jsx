@@ -2,9 +2,14 @@
 
 function getResults() {
     fetch(`https://api.github.com/users/${$('#search-terms').val()}/repos`)
-    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error(response.statusText);
+    })
     .then(responseJson => displayResults(responseJson))
-    .catch(error => alert('invalid username'));
+    .catch(error => alert('Please enter a valid username.'));
     
 }
 
