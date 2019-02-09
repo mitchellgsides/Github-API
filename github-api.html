@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="github-api.css">
+<body>
+
+<header>
+    <h1>Search GitHub Users:</h1>
+</header>
+
+<section class="github-api-search">
+    <form class="github-profile-search">
+        <input type="text" placeholder="Search GitHub" id="search-terms">
+        <input type="submit" class="submit-button">
+    </form>
+</section>
+
+<section class="search-results">
+    <h1 id="github-username">GitHub Username</h1>
+    <h3>Repos:</h3>
+    <p>Type a valid GitHub username above, and you'll find links to that user's repos.</p>
+        <ul id="results-listing">
+        </ul>
+</section>
+
+<footer>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="github-api.jsx"></script>
+</body>
+</html>
